@@ -1,0 +1,14 @@
+package combString;
+
+public class CombinationsStr {
+
+	public static void main(String[] args) {
+		String str = "abcd";
+		combStr(str);
+	}
+	
+	public static void combStr(String str){
+		combStr(str,)
+	}
+
+}

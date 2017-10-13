@@ -1,0 +1,14 @@
+package telephoneWords;
+
+import java.util.Scanner;
+
+public class TelNoWords {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String no = sc.next();
+		System.out.println(sc);
+
+	}
+
+}

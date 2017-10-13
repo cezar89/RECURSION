@@ -18,10 +18,10 @@ public class String_permutation {
 		//general case for loop to print the front of the string
 		else{
 			for(int i=0 ; i<str.length(); i++){
-				//System.out.print(str.charAt(i));
+				
 				String newStr = str.replaceAll(str.charAt(i)+"","");
 				String passedString = finalStr + str.charAt(i);
-				//System.out.println("!!"+ newStr);
+				
 				permutate(newStr,passedString);
 			}
 		}

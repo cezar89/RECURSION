@@ -1,0 +1,28 @@
+package telephoneWords;
+
+import java.util.Scanner;
+
+public class TelNoWords {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String no = sc.next();
+		getNameFromNumber(no , no.length(),"");
+	}
+	
+	public static void getNameFromNumber(String str , int i, String name){
+		if (i==0){
+			System.out.println(name);
+		}
+		else{
+			int k = i-1;
+			String passedStr = str.substring(1);
+			for (int j = 0 ; j < i; j++){
+				
+				getNameFromNumber(passedStr , k, name + str.charAt(j));
+				
+			}
+		}
+	}
+
+}

@@ -1,0 +1,43 @@
+package telephoneWords;
+
+import java.util.Scanner;
+
+public class TelNoWords {
+
+	public static void main(String[] args) {
+		
+		getNameFromNumber("23" ,"");
+		
+	}
+	
+
+	public static void getNameFromNumber(String str, String name){
+		if (str.length()==1){
+			char chr;
+			for(int k = 0 ; k < 3; k++){
+				chr = getCharKey((int)str.charAt(0)-48 , k);
+				System.out.println(name + chr);
+			}
+			
+		}
+		else{
+			String passedStr = str.substring(1);
+			//for (int j = 0 ; j < str.length(); j++){
+				for(int k = 0 ; k < 3; k++){
+					char chr = getCharKey((int)str.charAt(0)-48 , k);
+					getNameFromNumber(passedStr ,name + chr);
+				}
+				
+				
+				
+			//}
+		}
+	}
+	
+	public static char getCharKey(int no , int loc){
+		char[][] array = {{'0','0','0'},{'1','1','1'},{'A','B','C'},{'D','E','F'},{'G','H','I'},{'J','K','L'},
+							{'M','N','O'},{'P','R','S'},{'T','U','V'},{'W','X','Y'}};
+		
+		return array[no][loc];
+	}
+}
